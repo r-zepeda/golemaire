@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="navbar-desktop"></div>
+
+    <main>
+      <section>
+        <div class="new_transaction_header">
+            <h3>New Transaction</h3>
+        </div>
+
+        <form 
+        method="POST" 
+        action="https://script.google.com/macros/s/AKfycbx28m1fHMsVpd87JMiuWDHQ3CIe4AWzFW-WLECyiPRwu_G-qe7SIxd9M3gvF3nvbDN20A/exec"
+        >
+          <div class="steps-wrapper">
+            <div class="step-1">
+
+                <h3>Transaction Details</h3>
+                <input type="text" name="Lastname" placeholder="Lastname">
+                <input type="text" name="Firstname" placeholder="Firstname">
+                <br>
+                <div class="service-brand">
+                  <label for="ServiceType">Select Brand:</label>
+                  <select id="ServiceType" name="ServiceType">
+                    <option value="installation">Installation</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                    <option value="grape">Grape</option>
+                  </select>
+                  <label for="AcuBrand">Select Brand:</label>
+                  <select id="AcuBrand" name="AcuBrand">
+                    <option value="hitachi">Hitachi</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                    <option value="grape">Grape</option>
+                  </select>
+                </div>    
+            </div>
+            <div class="step-2">
+              <h3>ACU Details</h3>
+                  <label for="AcuType">ACU Type:</label>
+                  <select name="AcuType" id="AcuType">
+                    <option value="royal">royal</option>
+                  </select>
+                  <label for="Capacity">Capacity</label>
+                  <select name="Capacity" id="Capacity">
+                    <option value="1.5hp">1.5hp</option>
+                  </select>
+            </div>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="./src/scripts/main.js"></script>
+  </body>
+</html>
